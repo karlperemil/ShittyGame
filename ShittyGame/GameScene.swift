@@ -22,7 +22,7 @@ class GameScene: SKScene {
     var possible:Int = 0
     var time:Int = 0
     var timeOfGameStart = 0
-    var highScore = 0
+    var highScore:Int = 0
     var timePerLevel = 10
     var gamePlaying = true
     var background:SKSpriteNode!
@@ -30,6 +30,17 @@ class GameScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
+        
+        if let dirs = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as?  [String] {
+            let path = dirs[0].stringByAppendingPathComponent( "score.txt")
+            println(dirs)
+            if let text2 = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil) {
+                if(text2.toInt() > 0){
+                    highScore = text2.toInt()!
+                    println("highscore: \(highScore)")
+                }
+            }
+        }
         
         background = SKSpriteNode(imageNamed: "space.png")
         self.addChild(background)
@@ -50,7 +61,7 @@ class GameScene: SKScene {
         
         highScoreLabel.position = CGPoint(x: Int(sceneWidth/2), y: Int(sceneHeight) - 65)
         highScoreLabel.fontSize = 20
-        highScoreLabel.text = "Highscore: 0"
+        highScoreLabel.text = "Highscore: \(highScore)"
         self.addChild(highScoreLabel)
         
         gameOverLabel.position = CGPoint(x: Int(sceneWidth/2), y: Int(sceneHeight/2))
@@ -198,6 +209,12 @@ class GameScene: SKScene {
         if(score > highScore){
             highScore = score
             highScoreLabel.text = "Highscore: \(highScore)"
+            if let dirs = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as?  [String] {
+                let path = dirs[0].stringByAppendingPathComponent( "score.txt")
+                let text = String(highScore)
+                //writing
+                text.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
+            }
         }
         removeAllShips()
         timeSinceLastShip = 0
