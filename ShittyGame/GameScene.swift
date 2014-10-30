@@ -31,16 +31,7 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         
-        if let dirs = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as?  [String] {
-            let path = dirs[0].stringByAppendingPathComponent( "score.txt")
-            println(dirs)
-            if let text2 = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil) {
-                if(text2.toInt() > 0){
-                    highScore = text2.toInt()!
-                    println("highscore: \(highScore)")
-                }
-            }
-        }
+        highScore = readHighScore()
         
         background = SKSpriteNode(imageNamed: "space.png")
         self.addChild(background)
@@ -118,7 +109,7 @@ class GameScene: SKScene {
                 spriteTimeList.removeAtIndex(index)
             }
             
-            if(gamePlaying == false){
+            if(gamePlaying == false && timeWhenGameOver + 1 < Int(NSDate().timeIntervalSince1970)){
                 startGame()
             }
             
@@ -203,18 +194,15 @@ class GameScene: SKScene {
         scoreLabel.text = "Score: \(score)"
     }
     
+    var timeWhenGameOver:Int!
     func gameOver(){
         println("gameover")
         gamePlaying = false
+        timeWhenGameOver = Int(NSDate().timeIntervalSince1970)
         if(score > highScore){
             highScore = score
             highScoreLabel.text = "Highscore: \(highScore)"
-            if let dirs = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as?  [String] {
-                let path = dirs[0].stringByAppendingPathComponent( "score.txt")
-                let text = String(highScore)
-                //writing
-                text.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
-            }
+            saveHighScore()
         }
         removeAllShips()
         timeSinceLastShip = 0
@@ -232,6 +220,28 @@ class GameScene: SKScene {
     func removeAllShips(){
         for sprite:SKSpriteNode in spriteList {
             sprite.removeFromParent()
+        }
+    }
+    
+    func readHighScore() -> Int{
+        if let dirs = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as?  [String] {
+            let path = dirs[0].stringByAppendingPathComponent( "score.txt")
+            if let text2 = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil) {
+                if(text2.toInt() > 0){
+                    println("highscore: \(highScore)")
+                    return text2.toInt()!
+                }
+            }
+        }
+        return 0
+    }
+    
+    func saveHighScore(){
+        if let dirs = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as?  [String] {
+            let path = dirs[0].stringByAppendingPathComponent( "score.txt")
+            let text = String(highScore)
+            //writing
+            text.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
         }
     }
 }
