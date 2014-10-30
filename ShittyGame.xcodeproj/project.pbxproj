@@ -15,6 +15,9 @@
 		200AFDCC19FFFD5B001D9173 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 200AFDCB19FFFD5B001D9173 /* Images.xcassets */; };
 		200AFDCF19FFFD5B001D9173 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 200AFDCD19FFFD5B001D9173 /* LaunchScreen.xib */; };
 		200AFDDB19FFFD5B001D9173 /* ShittyGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200AFDDA19FFFD5B001D9173 /* ShittyGameTests.swift */; };
+		200AFDE51A011CE7001D9173 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200AFDE41A011CE7001D9173 /* Util.swift */; };
+		20E7671D1A0242230016403E /* GameSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E7671C1A0242230016403E /* GameSprite.swift */; };
+		20E7671F1A026A5B0016403E /* space.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E7671E1A026A5B0016403E /* space.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		200AFDD419FFFD5B001D9173 /* ShittyGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShittyGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		200AFDD919FFFD5B001D9173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		200AFDDA19FFFD5B001D9173 /* ShittyGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShittyGameTests.swift; sourceTree = "<group>"; };
+		200AFDE41A011CE7001D9173 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		20E7671C1A0242230016403E /* GameSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSprite.swift; sourceTree = "<group>"; };
+		20E7671E1A026A5B0016403E /* space.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = space.png; path = ShittyGame/space.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 		200AFDB219FFFD5B001D9173 = {
 			isa = PBXGroup;
 			children = (
+				20E7671E1A026A5B0016403E /* space.png */,
 				200AFDBD19FFFD5B001D9173 /* ShittyGame */,
 				200AFDD719FFFD5B001D9173 /* ShittyGameTests */,
 				200AFDBC19FFFD5B001D9173 /* Products */,
@@ -89,6 +96,8 @@
 				200AFDCB19FFFD5B001D9173 /* Images.xcassets */,
 				200AFDCD19FFFD5B001D9173 /* LaunchScreen.xib */,
 				200AFDBE19FFFD5B001D9173 /* Supporting Files */,
+				200AFDE41A011CE7001D9173 /* Util.swift */,
+				20E7671C1A0242230016403E /* GameSprite.swift */,
 			);
 			path = ShittyGame;
 			sourceTree = "<group>";
@@ -200,6 +209,7 @@
 			files = (
 				200AFDCF19FFFD5B001D9173 /* LaunchScreen.xib in Resources */,
 				200AFDCC19FFFD5B001D9173 /* Images.xcassets in Resources */,
+				20E7671F1A026A5B0016403E /* space.png in Resources */,
 				200AFDC319FFFD5B001D9173 /* GameScene.sks in Resources */,
 				200AFDCA19FFFD5B001D9173 /* Main.storyboard in Resources */,
 			);
@@ -222,6 +232,8 @@
 				200AFDC519FFFD5B001D9173 /* GameScene.swift in Sources */,
 				200AFDC719FFFD5B001D9173 /* GameViewController.swift in Sources */,
 				200AFDC119FFFD5B001D9173 /* AppDelegate.swift in Sources */,
+				20E7671D1A0242230016403E /* GameSprite.swift in Sources */,
+				200AFDE51A011CE7001D9173 /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +425,7 @@
 				200AFDE019FFFD5B001D9173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		200AFDE119FFFD5B001D9173 /* Build configuration list for PBXNativeTarget "ShittyGameTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +434,7 @@
 				200AFDE319FFFD5B001D9173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
