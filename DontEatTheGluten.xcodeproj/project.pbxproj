@@ -14,11 +14,26 @@
 		200AFDCA19FFFD5B001D9173 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 200AFDC819FFFD5B001D9173 /* Main.storyboard */; };
 		200AFDCC19FFFD5B001D9173 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 200AFDCB19FFFD5B001D9173 /* Images.xcassets */; };
 		200AFDCF19FFFD5B001D9173 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 200AFDCD19FFFD5B001D9173 /* LaunchScreen.xib */; };
-		200AFDDB19FFFD5B001D9173 /* ShittyGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200AFDDA19FFFD5B001D9173 /* ShittyGameTests.swift */; };
+		200AFDDB19FFFD5B001D9173 /* DontEatTheGlutenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200AFDDA19FFFD5B001D9173 /* DontEatTheGlutenTests.swift */; };
 		200AFDE51A011CE7001D9173 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200AFDE41A011CE7001D9173 /* Util.swift */; };
 		20E7671D1A0242230016403E /* GameSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E7671C1A0242230016403E /* GameSprite.swift */; };
 		20E7671F1A026A5B0016403E /* space.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E7671E1A026A5B0016403E /* space.png */; };
 		20E767211A0295240016403E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 20E767201A0295240016403E /* .gitignore */; };
+		20E767281A0791410016403E /* broccoli.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E767241A0791410016403E /* broccoli.png */; };
+		20E767291A0791410016403E /* carrot.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E767251A0791410016403E /* carrot.png */; };
+		20E7672A1A0791410016403E /* gluten.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E767261A0791410016403E /* gluten.png */; };
+		20E7672B1A0791410016403E /* steak.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E767271A0791410016403E /* steak.png */; };
+		20E767381A07BEEA0016403E /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 20E7672D1A07BEEA0016403E /* Contents.json */; };
+		20E767391A07BEEA0016403E /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E7672E1A07BEEA0016403E /* Icon-40.png */; };
+		20E7673A1A07BEEA0016403E /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E7672F1A07BEEA0016403E /* Icon-40@2x.png */; };
+		20E7673B1A07BEEA0016403E /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E767301A07BEEA0016403E /* Icon-40@3x.png */; };
+		20E7673C1A07BEEA0016403E /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E767311A07BEEA0016403E /* Icon-60@2x.png */; };
+		20E7673D1A07BEEA0016403E /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E767321A07BEEA0016403E /* Icon-60@3x.png */; };
+		20E7673E1A07BEEA0016403E /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E767331A07BEEA0016403E /* Icon-76.png */; };
+		20E7673F1A07BEEA0016403E /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E767341A07BEEA0016403E /* Icon-76@2x.png */; };
+		20E767401A07BEEA0016403E /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E767351A07BEEA0016403E /* Icon-Small.png */; };
+		20E767411A07BEEA0016403E /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E767361A07BEEA0016403E /* Icon-Small@2x.png */; };
+		20E767421A07BEEA0016403E /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20E767371A07BEEA0016403E /* Icon-Small@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		200AFDBB19FFFD5B001D9173 /* ShittyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShittyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		200AFDBB19FFFD5B001D9173 /* DontEatTheGluten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DontEatTheGluten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		200AFDBF19FFFD5B001D9173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		200AFDC019FFFD5B001D9173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		200AFDC219FFFD5B001D9173 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -41,13 +56,28 @@
 		200AFDC919FFFD5B001D9173 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		200AFDCB19FFFD5B001D9173 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		200AFDCE19FFFD5B001D9173 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		200AFDD419FFFD5B001D9173 /* ShittyGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShittyGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		200AFDD419FFFD5B001D9173 /* DontEatTheGlutenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DontEatTheGlutenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		200AFDD919FFFD5B001D9173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		200AFDDA19FFFD5B001D9173 /* ShittyGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShittyGameTests.swift; sourceTree = "<group>"; };
+		200AFDDA19FFFD5B001D9173 /* DontEatTheGlutenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontEatTheGlutenTests.swift; sourceTree = "<group>"; };
 		200AFDE41A011CE7001D9173 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		20E7671C1A0242230016403E /* GameSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSprite.swift; sourceTree = "<group>"; };
 		20E7671E1A026A5B0016403E /* space.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = space.png; path = ShittyGame/space.png; sourceTree = "<group>"; };
 		20E767201A0295240016403E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		20E767241A0791410016403E /* broccoli.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = broccoli.png; path = ShittyGame/broccoli.png; sourceTree = "<group>"; };
+		20E767251A0791410016403E /* carrot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = carrot.png; path = ShittyGame/carrot.png; sourceTree = "<group>"; };
+		20E767261A0791410016403E /* gluten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gluten.png; path = ShittyGame/gluten.png; sourceTree = "<group>"; };
+		20E767271A0791410016403E /* steak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = steak.png; path = ShittyGame/steak.png; sourceTree = "<group>"; };
+		20E7672D1A07BEEA0016403E /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		20E7672E1A07BEEA0016403E /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		20E7672F1A07BEEA0016403E /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		20E767301A07BEEA0016403E /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
+		20E767311A07BEEA0016403E /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		20E767321A07BEEA0016403E /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		20E767331A07BEEA0016403E /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		20E767341A07BEEA0016403E /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		20E767351A07BEEA0016403E /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		20E767361A07BEEA0016403E /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		20E767371A07BEEA0016403E /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +101,15 @@
 		200AFDB219FFFD5B001D9173 = {
 			isa = PBXGroup;
 			children = (
+				20E767241A0791410016403E /* broccoli.png */,
+				20E767251A0791410016403E /* carrot.png */,
+				20E7672C1A07BEEA0016403E /* AppIcon.appiconset */,
+				20E767261A0791410016403E /* gluten.png */,
+				20E767271A0791410016403E /* steak.png */,
 				20E767201A0295240016403E /* .gitignore */,
 				20E7671E1A026A5B0016403E /* space.png */,
-				200AFDBD19FFFD5B001D9173 /* ShittyGame */,
-				200AFDD719FFFD5B001D9173 /* ShittyGameTests */,
+				200AFDBD19FFFD5B001D9173 /* DontEatTheGluten */,
+				200AFDD719FFFD5B001D9173 /* DontEatTheGlutenTests */,
 				200AFDBC19FFFD5B001D9173 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,13 +117,13 @@
 		200AFDBC19FFFD5B001D9173 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				200AFDBB19FFFD5B001D9173 /* ShittyGame.app */,
-				200AFDD419FFFD5B001D9173 /* ShittyGameTests.xctest */,
+				200AFDBB19FFFD5B001D9173 /* DontEatTheGluten.app */,
+				200AFDD419FFFD5B001D9173 /* DontEatTheGlutenTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		200AFDBD19FFFD5B001D9173 /* ShittyGame */ = {
+		200AFDBD19FFFD5B001D9173 /* DontEatTheGluten */ = {
 			isa = PBXGroup;
 			children = (
 				200AFDC019FFFD5B001D9173 /* AppDelegate.swift */,
@@ -102,6 +137,7 @@
 				200AFDE41A011CE7001D9173 /* Util.swift */,
 				20E7671C1A0242230016403E /* GameSprite.swift */,
 			);
+			name = DontEatTheGluten;
 			path = ShittyGame;
 			sourceTree = "<group>";
 		};
@@ -113,12 +149,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		200AFDD719FFFD5B001D9173 /* ShittyGameTests */ = {
+		200AFDD719FFFD5B001D9173 /* DontEatTheGlutenTests */ = {
 			isa = PBXGroup;
 			children = (
-				200AFDDA19FFFD5B001D9173 /* ShittyGameTests.swift */,
+				200AFDDA19FFFD5B001D9173 /* DontEatTheGlutenTests.swift */,
 				200AFDD819FFFD5B001D9173 /* Supporting Files */,
 			);
+			name = DontEatTheGlutenTests;
 			path = ShittyGameTests;
 			sourceTree = "<group>";
 		};
@@ -130,12 +167,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		20E7672C1A07BEEA0016403E /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				20E7672D1A07BEEA0016403E /* Contents.json */,
+				20E7672E1A07BEEA0016403E /* Icon-40.png */,
+				20E7672F1A07BEEA0016403E /* Icon-40@2x.png */,
+				20E767301A07BEEA0016403E /* Icon-40@3x.png */,
+				20E767311A07BEEA0016403E /* Icon-60@2x.png */,
+				20E767321A07BEEA0016403E /* Icon-60@3x.png */,
+				20E767331A07BEEA0016403E /* Icon-76.png */,
+				20E767341A07BEEA0016403E /* Icon-76@2x.png */,
+				20E767351A07BEEA0016403E /* Icon-Small.png */,
+				20E767361A07BEEA0016403E /* Icon-Small@2x.png */,
+				20E767371A07BEEA0016403E /* Icon-Small@3x.png */,
+			);
+			name = AppIcon.appiconset;
+			path = ShittyGame/AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		200AFDBA19FFFD5B001D9173 /* ShittyGame */ = {
+		200AFDBA19FFFD5B001D9173 /* DontEatTheGluten */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 200AFDDE19FFFD5B001D9173 /* Build configuration list for PBXNativeTarget "ShittyGame" */;
+			buildConfigurationList = 200AFDDE19FFFD5B001D9173 /* Build configuration list for PBXNativeTarget "DontEatTheGluten" */;
 			buildPhases = (
 				200AFDB719FFFD5B001D9173 /* Sources */,
 				200AFDB819FFFD5B001D9173 /* Frameworks */,
@@ -145,14 +201,14 @@
 			);
 			dependencies = (
 			);
-			name = ShittyGame;
+			name = DontEatTheGluten;
 			productName = ShittyGame;
-			productReference = 200AFDBB19FFFD5B001D9173 /* ShittyGame.app */;
+			productReference = 200AFDBB19FFFD5B001D9173 /* DontEatTheGluten.app */;
 			productType = "com.apple.product-type.application";
 		};
-		200AFDD319FFFD5B001D9173 /* ShittyGameTests */ = {
+		200AFDD319FFFD5B001D9173 /* DontEatTheGlutenTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 200AFDE119FFFD5B001D9173 /* Build configuration list for PBXNativeTarget "ShittyGameTests" */;
+			buildConfigurationList = 200AFDE119FFFD5B001D9173 /* Build configuration list for PBXNativeTarget "DontEatTheGlutenTests" */;
 			buildPhases = (
 				200AFDD019FFFD5B001D9173 /* Sources */,
 				200AFDD119FFFD5B001D9173 /* Frameworks */,
@@ -163,9 +219,9 @@
 			dependencies = (
 				200AFDD619FFFD5B001D9173 /* PBXTargetDependency */,
 			);
-			name = ShittyGameTests;
+			name = DontEatTheGlutenTests;
 			productName = ShittyGameTests;
-			productReference = 200AFDD419FFFD5B001D9173 /* ShittyGameTests.xctest */;
+			productReference = 200AFDD419FFFD5B001D9173 /* DontEatTheGlutenTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +242,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 200AFDB619FFFD5B001D9173 /* Build configuration list for PBXProject "ShittyGame" */;
+			buildConfigurationList = 200AFDB619FFFD5B001D9173 /* Build configuration list for PBXProject "DontEatTheGluten" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -199,8 +255,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				200AFDBA19FFFD5B001D9173 /* ShittyGame */,
-				200AFDD319FFFD5B001D9173 /* ShittyGameTests */,
+				200AFDBA19FFFD5B001D9173 /* DontEatTheGluten */,
+				200AFDD319FFFD5B001D9173 /* DontEatTheGlutenTests */,
 			);
 		};
 /* End PBXProject section */
@@ -210,11 +266,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20E7672B1A0791410016403E /* steak.png in Resources */,
+				20E767291A0791410016403E /* carrot.png in Resources */,
 				200AFDCF19FFFD5B001D9173 /* LaunchScreen.xib in Resources */,
 				200AFDCC19FFFD5B001D9173 /* Images.xcassets in Resources */,
 				20E7671F1A026A5B0016403E /* space.png in Resources */,
+				20E767281A0791410016403E /* broccoli.png in Resources */,
 				200AFDC319FFFD5B001D9173 /* GameScene.sks in Resources */,
 				20E767211A0295240016403E /* .gitignore in Resources */,
+				20E7673D1A07BEEA0016403E /* Icon-60@3x.png in Resources */,
+				20E767391A07BEEA0016403E /* Icon-40.png in Resources */,
+				20E767401A07BEEA0016403E /* Icon-Small.png in Resources */,
+				20E7673F1A07BEEA0016403E /* Icon-76@2x.png in Resources */,
+				20E767421A07BEEA0016403E /* Icon-Small@3x.png in Resources */,
+				20E7673A1A07BEEA0016403E /* Icon-40@2x.png in Resources */,
+				20E767411A07BEEA0016403E /* Icon-Small@2x.png in Resources */,
+				20E7672A1A0791410016403E /* gluten.png in Resources */,
+				20E7673E1A07BEEA0016403E /* Icon-76.png in Resources */,
+				20E7673C1A07BEEA0016403E /* Icon-60@2x.png in Resources */,
+				20E767381A07BEEA0016403E /* Contents.json in Resources */,
+				20E7673B1A07BEEA0016403E /* Icon-40@3x.png in Resources */,
 				200AFDCA19FFFD5B001D9173 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,7 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				200AFDDB19FFFD5B001D9173 /* ShittyGameTests.swift in Sources */,
+				200AFDDB19FFFD5B001D9173 /* DontEatTheGlutenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +325,7 @@
 /* Begin PBXTargetDependency section */
 		200AFDD619FFFD5B001D9173 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 200AFDBA19FFFD5B001D9173 /* ShittyGame */;
+			target = 200AFDBA19FFFD5B001D9173 /* DontEatTheGluten */;
 			targetProxy = 200AFDD519FFFD5B001D9173 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -362,7 +433,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShittyGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DontEatTheGluten;
 			};
 			name = Debug;
 		};
@@ -372,7 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShittyGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DontEatTheGluten;
 			};
 			name = Release;
 		};
@@ -390,8 +461,8 @@
 				);
 				INFOPLIST_FILE = ShittyGameTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShittyGame.app/ShittyGame";
+				PRODUCT_NAME = DontEatTheGlutenTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DontEatTheGluten.app/DontEatTheGluten";
 			};
 			name = Debug;
 		};
@@ -405,15 +476,15 @@
 				);
 				INFOPLIST_FILE = ShittyGameTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShittyGame.app/ShittyGame";
+				PRODUCT_NAME = DontEatTheGlutenTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DontEatTheGluten.app/DontEatTheGluten";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		200AFDB619FFFD5B001D9173 /* Build configuration list for PBXProject "ShittyGame" */ = {
+		200AFDB619FFFD5B001D9173 /* Build configuration list for PBXProject "DontEatTheGluten" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				200AFDDC19FFFD5B001D9173 /* Debug */,
@@ -422,7 +493,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		200AFDDE19FFFD5B001D9173 /* Build configuration list for PBXNativeTarget "ShittyGame" */ = {
+		200AFDDE19FFFD5B001D9173 /* Build configuration list for PBXNativeTarget "DontEatTheGluten" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				200AFDDF19FFFD5B001D9173 /* Debug */,
@@ -431,7 +502,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		200AFDE119FFFD5B001D9173 /* Build configuration list for PBXNativeTarget "ShittyGameTests" */ = {
+		200AFDE119FFFD5B001D9173 /* Build configuration list for PBXNativeTarget "DontEatTheGlutenTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				200AFDE219FFFD5B001D9173 /* Debug */,

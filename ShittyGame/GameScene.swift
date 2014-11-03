@@ -18,6 +18,7 @@ class GameScene: SKScene {
     var timeLabel = SKLabelNode(fontNamed:"AvenirNext-Medium")
     var highScoreLabel = SKLabelNode(fontNamed:"AvenirNext-Medium")
     var gameOverLabel = SKLabelNode(fontNamed:"AvenirNext-Medium")
+    var additionalTimeLabel = SKLabelNode(fontNamed:"AvenirNext-Medium")
     var score:Int = 0
     var possible:Int = 0
     var time:Int = 0
@@ -56,8 +57,16 @@ class GameScene: SKScene {
         self.addChild(highScoreLabel)
         
         gameOverLabel.position = CGPoint(x: Int(sceneWidth/2), y: Int(sceneHeight/2))
-        gameOverLabel.fontSize = 40
+        gameOverLabel.fontSize = 30
         gameOverLabel.text = "Game Over"
+        
+        additionalTimeLabel.position = CGPoint(x: Int(sceneWidth/2), y: 65)
+        additionalTimeLabel.fontSize = 30
+        additionalTimeLabel.color = UIColor(red: 1.0, green: 0, blue: 0, alpha: 1)
+        additionalTimeLabel.text = "+10"
+        additionalTimeLabel.xScale = 0
+        additionalTimeLabel.yScale = 0
+        self.addChild(additionalTimeLabel)
         
         timeOfGameStart = Int(NSDate().timeIntervalSince1970)
         
@@ -70,6 +79,7 @@ class GameScene: SKScene {
     
     func startGame(){
         gameOverLabel.removeFromParent()
+        gameOverLabel.text = "Game Over"
         self.addChild(timeLabel)
         self.addChild(background)
         scoreLabel.text = "Score: \(score)"
@@ -96,40 +106,44 @@ class GameScene: SKScene {
                 println("ship!")
                 for var index = 0; index < spriteList.count; index++ {
                     var sprite = spriteList[index]
-                    if(touchedObject == sprite){
-                        sprite.removeFromParent()
-                        spritesToRemove.append(index)
-                        score++
-                        updateText()
+                    var spriteImage = spriteImageList[index]
+                    if(sprite.xScale > 0.35){
+                        if(touchedObject == sprite && spriteImage != "gluten.png"){
+                            println(spriteImage)
+                            sprite.removeFromParent()
+                            spritesToRemove.append(index)
+                            addScore()
+                            updateText()
+                        }
+                        else if(touchedObject == sprite && spriteImage == "gluten.png") {
+                            println(spriteImage)
+                            println("OH NO!!! GLUTEN!!!!")
+                            sprite.removeFromParent()
+                            spritesToRemove.append(index)
+                            updateText()
+                            gameOverLabel.text = "You ate the gluten!"
+                            gameOver()
+                            return
+                        }
                     }
                 }
             }
             for index in spritesToRemove {
                 spriteList.removeAtIndex(index)
                 spriteTimeList.removeAtIndex(index)
+                spriteImageList.removeAtIndex(index)
             }
             
             if(gamePlaying == false && timeWhenGameOver + 1 < Int(NSDate().timeIntervalSince1970)){
                 startGame()
             }
-            
-            /*
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            sprite.xScale = 0.2
-            sprite.yScale = 0.2
-            sprite.position = location
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)*/
         }
     }
    
     override func update(currentTime: CFTimeInterval) {
         
         let timeNow = Int(NSDate().timeIntervalSince1970)
-        let bonusTime = timePerLevel * (1 + (score/20))
+        let bonusTime = timePerLevel * (1 + (score/10))
         let timeLeft = timeOfGameStart+bonusTime - timeNow
         timeLabel.text = "Time Left: \(timeLeft)"
         if(timeLeft <= 0 && gamePlaying){
@@ -148,6 +162,14 @@ class GameScene: SKScene {
             sprite.removeFromParent()
             spriteTimeList.removeAtIndex(spriteIndex)
             spriteList.removeAtIndex(spriteIndex)
+            spriteImageList.removeAtIndex(spriteIndex)
+        }
+    }
+    
+    func addScore(){
+        score++
+        if(score%10 == 0){
+            showExtraTime()
         }
     }
     
@@ -155,21 +177,26 @@ class GameScene: SKScene {
         self.backgroundColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0)
     }
     
+    let images:[String] = ["carrot.png","broccoli.png","steak.png","gluten.png"]
+    var spriteImageList:[String] = []
     func createShipAtRandomPos(){
         if(!gamePlaying){
             return
         }
         possible++
-        let sprite = SKSpriteNode(imageNamed:"Spaceship")
+        let randomImageIndex = Int(floor( Util.random() * CGFloat(images.count) ))
+        let imageToUse = images[randomImageIndex]
+        let sprite = SKSpriteNode(imageNamed:images[randomImageIndex])
         sprite.xScale = 0
         sprite.yScale = 0
+        sprite.name = imageToUse
         var xpos = getRandomXonScreen(padding: 60)
         var ypos = getRandomYonScreen(padding: 60)
         sprite.position = CGPoint(x: xpos, y: ypos)
         let action = SKAction.rotateByAngle(CGFloat(M_PI), duration: 1)
         sprite.runAction(SKAction.repeatActionForever(action))
-        let zoomAnim = SKAction.scaleXTo(0.2, duration: 0.2)
-        let zoomAnimy = SKAction.scaleYTo(0.2, duration: 0.2)
+        let zoomAnim = SKAction.scaleXTo(0.4, duration: 0.2)
+        let zoomAnimy = SKAction.scaleYTo(0.4, duration: 0.2)
         let bundle = SKAction.group([zoomAnim,zoomAnimy])
         let animMove = SKAction.moveTo(CGPoint(x: getRandomXonScreen(),y:getRandomYonScreen()), duration: 1.5)
         let animZoomOut = SKAction.scaleTo(0, duration: 0.2)
@@ -178,6 +205,7 @@ class GameScene: SKScene {
         self.addChild(sprite)
         spriteList.append(sprite)
         spriteTimeList.append(Int(NSDate().timeIntervalSince1970))
+        spriteImageList.append(imageToUse)
         updateText()
     }
     
@@ -208,6 +236,7 @@ class GameScene: SKScene {
         timeSinceLastShip = 0
         spriteList = []
         spriteTimeList = []
+        spriteImageList = []
         score = 0
         possible = 0
         time = 0
@@ -221,6 +250,17 @@ class GameScene: SKScene {
         for sprite:SKSpriteNode in spriteList {
             sprite.removeFromParent()
         }
+    }
+    
+    func showExtraTime() {
+        additionalTimeLabel.xScale = 0
+        additionalTimeLabel.yScale = 0
+        let scaleAction = SKAction.scaleTo(1.0, duration: 0.5)
+        let rotateAction = SKAction.rotateByAngle(0.3, duration: 0.5)
+        let rotateAction2 = SKAction.rotateByAngle(-0.3, duration: 0.5)
+        let scaleDownAction = SKAction.scaleTo(0,duration:0.5)
+        let sequence = SKAction.sequence([scaleAction,rotateAction,rotateAction2,scaleDownAction])
+        additionalTimeLabel.runAction(sequence)
     }
     
     func readHighScore() -> Int{
